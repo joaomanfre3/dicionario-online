@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-lora), ui-serif, Georgia, serif;
+
+  /* Tema "papel" claro com acento azul-marinho — identidade própria */
+  --color-ink: #1c2433;
+  --color-accent: #1e40af; /* azul-marinho */
+  --color-paper: #fcfbf7;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  min-height: 100dvh;
+  color: var(--color-ink);
+  background:
+    radial-gradient(70% 40% at 50% -5%, #e6ecfb 0%, transparent 60%),
+    var(--color-paper);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: #bfdbfe;
+  color: #1c2433;
+}
